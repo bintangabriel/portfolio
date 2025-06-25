@@ -1,0 +1,69 @@
+"use client"
+import React, { useRef } from 'react'
+import SectionHeading from './SectionHeading'
+import { projectsData } from '@/lib/data'
+import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
+export default function Projects() {
+  return (
+    <section id='project' className='scroll-mt-28'>
+        <SectionHeading>
+          My Projects
+        </SectionHeading>
+        <div className='pb-10'>
+            {
+              projectsData.map((item, index) => (
+                <React.Fragment key={index}>
+                  <Project {...item} />
+                </React.Fragment>
+              ))
+            }
+        </div>
+    </section>
+  )
+}
+type ProjectProp = (typeof projectsData)[number];
+
+function Project({title, description, tags, imageUrl} : ProjectProp){
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.1 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.65, 1]);
+  return (
+    <motion.div ref={ref} className='bg-gray-100 max-w-[42rem] broder border-black/5 rounded-lg overflow-hidden relative mb-5 hover:scale-105 transition'
+    style={{
+      scale: scaleProgress,
+      opacity: opacityProgress,
+    }}>
+      <div className='pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] h-full sm:max-w-1/2 flex flex-col'>
+        <h3 className='text-2xl font-semibold'>{title}</h3>
+        <p className='mt-2 leading-relaxed text-gray-700'>{description}</p>
+        <ul className='flex flex-wrap px-3 gap-2 mt-3 mb-4'>
+          {tags.map((skill, index) => (
+            <li className='hover:scale-105 hover:text-black hover:bg-white transition bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full' key={index}>
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Image src={imageUrl} 
+      alt='project' quality={95} className='absolute hidden sm:block top-8 -right-40 w-[28rem] rounded-t-lg object-cover
+      shadow-2xl hover:scale-105 transition 
+      group-hover:scale-[1.04]
+        group-hover:-translate-x-3
+        group-hover:translate-y-3
+        group-hover:-rotate-2
+
+        group-even:group-hover:translate-x-3
+        group-even:group-hover:translate-y-3
+        group-even:group-hover:rotate-2
+
+        group-even:right-[initial] group-even:-left-40'
+      />
+    </motion.div>
+  )
+}
