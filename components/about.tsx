@@ -10,7 +10,7 @@ export default function About() {
     <div className='max-w-[40rem] leading-8 scroll-mt-28 mb-10'>
       <motion.p className='text-center'
       initial={{opacity: 0, y: 100}} animate={{opacity: 1, y: 0}} transition={{delay: 0.1}}> 
-        A {" "}<span className='font-bold text-red-300'>computer science student</span>{" "}from {" "}<span className='font-bold text-red-300'>University of Indonesia</span>.
+        A {" "}<span className='font-bold text-red-300'>computer science graduate</span>{" "}from {" "}<span className='font-bold text-red-300'>University of Indonesia</span>.
         With experience in {" "} <span className='font-bold text-red-300'>Tensorflow, Python, SQL, Django, and sklearn,</span>
         {" "}I specialize in {" "}<span className='font-bold text-red-300'>machine learning </span>{" "}including {" "} <span className=' text-red-300 font-bold'>
         data science and data manipulation problems</span>. I also have experiences in using some framework such as {" "} 
