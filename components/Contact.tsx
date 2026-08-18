@@ -39,7 +39,7 @@ const Contact = () => {
         </SectionHeading>
         <div className='rounded-full sm:w-[40rem]'>
           <form
-            className='flex flex-col items-center bg-gray-100 transition overflow-x-hidden relative gap-4 px-3 py-3 rounded-md'
+            className='flex flex-col items-center bg-gray-100 transition overflow-x-hidden relative gap-4 mb-4 px-3 py-3 rounded-md'
             onSubmit={handleSubmit}
           >
             <input
@@ -57,7 +57,7 @@ const Contact = () => {
               value={message}
               placeholder='Write your email message here'
             />
-            <button className='bg-cyan-800 px-4 py-[6px] text-white'>
+            <button className='bg-cyan-800 px-4 py-[6px] text-white rounded'>
               Submit
             </button>
           </form>

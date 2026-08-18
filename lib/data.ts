@@ -37,11 +37,18 @@ export const navData = [
 
 export const experiencesData = [
   {
+    title: "Software Engineer - Intermediate to Senior",
+    location: "XL Smart",
+    description: "Working as a software engineer in XL Smart where I handled all of the Axis bundling to smartphone brand such as Samsung, Iphone, Oppo, etc.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Apr 2026 - Present",
+  },
+  {
     title: "Management Trainee IT - Product Owner",
     location: "Astra Credit Companies",
     description: "Joined in Sept 2024 as a IT management trainee, I learn the end to end of the company busines process and build 5 project, in total, to benefit the company. I ranked 2 among the IT Management trainee and get a placement as a Product Owner to handle the internal and external product for Astra Financial Services.",
     icon: React.createElement(CgWorkAlt),
-    date: "Sept 2024 - Present",
+    date: "Sept 2024 - Apr 2026",
   },
   {
     title: "Software Engineer",
@@ -78,7 +85,7 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: "Lucky Edukasi - Bimbel Online for Bimbel Lucky",
-    description: "Website for Bimbel Lucky, an online tutoring service in Indonesia. I involved in the early phase of the development as a full stack developer and later continued by 2 of my friends",
+    description: "Website for Bimbel Lucky, an online tutoring service in Indonesia.",
     tags: ["Next.js", "Go", "Tailwind", "PostgreSQL", "Jenkins"],
     imageUrl: bimbel_lucky,
   },
