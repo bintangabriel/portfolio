@@ -16,7 +16,7 @@ export default function About() {
         data science and data manipulation problems</span>. I also have experiences in using some framework such as {" "} 
         <span className='font-bold text-red-300'>SpringBoot, React, Flask, Django</span>{" "}to create web and mobile app. I love to explore new technologies and open 
         to new opportunities in {" "}<span className='font-bold text-red-300'>data science, machine learning, and software engineering</span>{" "}field. As a 
-        dedicated learner, I am ready to contribute to the advancement of the technology industry.
+        dedicated learner, I am ready to contribute to the advancement of the technology industry
       </motion.p>
     </div>
     </section>
