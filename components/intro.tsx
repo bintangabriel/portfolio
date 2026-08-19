@@ -62,7 +62,7 @@ export default function Intro() {
         Hi! It's me,{" "}
         <span className="font-bold">Bintang Gabriel Hutabarat</span>. I'm a very{" "}
         <span className="font-bold"> process centric </span>
-        and <span className="font-bold">passionate</span> student
+        and <span className="font-bold">passionate</span> person
       </motion.p>
 
       <motion.div

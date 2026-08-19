@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 export default async function sendMailHandler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     try {
-      const { name, message } = req.body;
+      const { name, message, email } = req.body;
 
       const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
@@ -20,7 +20,7 @@ export default async function sendMailHandler(req: NextApiRequest, res: NextApiR
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
         subject: name,
-        text: message
+        text: message + "\n\nSent by: " + email,
       });
 
       console.log('Message sent: %s', info.messageId);
