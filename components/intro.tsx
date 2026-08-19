@@ -84,7 +84,7 @@ export default function Intro() {
           focus:scale-105 active:scale-105 transition'
           >Download My CV <HiDownload className='opacity-70 group-hover:translate-y-1 transition' /></Link> */}
         <a
-          href="/cv/CV.pdf"
+          href="/cv/CV_SEV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full hover:scale-105 outline-none
